@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+html{
+    --primary-color: #fff;
+    --secondary-color: #181818;
+}
+.dark-mode{
+    --primary-color: #181818;
+    --secondary-color: #fff;
+}
+body{
+    width: 100%;
+    max-height: 100%;
+    background: var(--primary-color);
+    text-align: center;
+}
+h1{
+    font-size: 3em;
+    color: #6660ff;
+    margin: 10px 0 20px;
+}
+.hero{
+    margin: 0 auto;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+.container{
+    flex-basis: 18%;
+    padding: 5px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+}
+.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.container:hover img{
+    transform: scale(1.03);
+}
+.pop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+}
+#icon {
+    width: 25px;
+    float: right;
+    margin-right: 20px;
+}
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+}
+.cancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.cancel i{
+    color: #fff;
+    padding: 10px;
+    font-size: 2em;
+}
+@media only screen and (max-width:750px) {
+    .body{
+        min-height: 100%;
+    }
+    h1{
+        font-size: 2em;
+    }
+    .hero{
+        width: 80%;
+        min-height: 80vh;
+        margin-bottom: 30%;
+    }
+    .container{
+        flex-basis: 45%;
+    }
+    .card{
+        width: 95%;
+        height: 50vh;
+    }
+    .cancel i {
+        color: #fff;
+        font-size: 1.5em;
+    }
+}
